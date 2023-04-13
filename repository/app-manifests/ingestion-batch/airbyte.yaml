@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "git@ssh.dev.azure.com:v3/vibrateam/DataVibra/kafka-project"
+    repoURL: "https://github.com/luisaladeira/data_engineer.git"
     path: repository/helm-charts/airbyte/
     targetRevision: HEAD
     helm:
