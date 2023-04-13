@@ -27,6 +27,8 @@ kubectl create namespace orchestrator
 ```bash
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo add airbyte https://airbytehq.github.io/helm-charts
+helm repo add apache-airflow https://airflow.apache.org
+
 helm repo update
 ```
 
@@ -85,8 +87,8 @@ kubectl get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" -n
 
 # Remove old version of the chart and install the latest version:
 ```bash 
-rm ./repository/helm-charts/airbyte -rf |
-helm pull airbyte/airbyte --version 0.41.0 -d ./repository/helm-charts --untar
+rm ./repository/helm-charts/airflow -rf |
+helm pull airflow/airflow -d ./repository/helm-charts --untar
 ```
 ```yaml
     service:
